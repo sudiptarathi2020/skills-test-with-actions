@@ -6,7 +6,8 @@ import os
 # None
 
 # Project Modules
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+sys.path.insert(0, os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '../src')))
 from calculations import area_of_circle, get_nth_fibonacci   # noqa: E402
 
 
@@ -57,6 +58,7 @@ def test_get_nth_fibonacci_one():
     # Assert
     assert result == 1
 
+
 def test_get_nth_fibonacci_ten():
     """Test with n=10."""
     # Arrange
@@ -68,6 +70,7 @@ def test_get_nth_fibonacci_ten():
     # Assert
     assert result == 55
 
+
 def test_area_of_circle_negative_radius(self):
     """Test with a negative radius to raise ValueError."""
     # Arrange
@@ -75,7 +78,8 @@ def test_area_of_circle_negative_radius(self):
 
     # Act & Assert
     with self.assertRaises(ValueError):
-      area_of_circle(radius)
+        area_of_circle(radius)
+
 
 def test_get_nth_fibonacci_negative(self):
     """Test with a negative number to raise ValueError."""
